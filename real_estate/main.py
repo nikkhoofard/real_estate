@@ -1,5 +1,7 @@
 from user import User
 from random import choice
+from region import Region
+from estate import Apartment, House
 
 FIRST_NAME = ['mahdi', 'mohammad', 'majid', 'reza']
 LAST_NAME = ['mahdivi', 'mohammadi', 'majidi', 'rezayie']
@@ -12,3 +14,11 @@ if __name__ == "__main__":
 
     for user in User.objects_list:
         print(f"{user.id} {user.fullname}")
+
+    reg1 = Region(name='R1')
+
+    apt1 = Apartment(has_elevator=True, has_parking=True, floor=2,
+                     user=User.objects_list[0], area=80, room_count=3, built_year=1399,
+                     region=reg1, address='qom shahrdary squad')
+
+    apt1.show_description()
