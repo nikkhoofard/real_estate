@@ -2,6 +2,8 @@ from user import User
 from random import choice
 from region import Region
 from estate import Apartment, House, Store
+from advertisment import ApartmentRent, ApartmentSell,\
+    HouseRent, HouseSell, StoreRent, StoreSell
 
 FIRST_NAME = ['mahdi', 'mohammad', 'majid', 'reza']
 LAST_NAME = ['mahdivi', 'mohammadi', 'majidi', 'rezayie']
@@ -31,3 +33,12 @@ if __name__ == "__main__":
     store = Store(user=User.objects_list[1], area=70, room_count=1,
                   built_year=1370, region=reg1, address='qom jahad squad')
     store.show_description()
+
+    apartmentsell = ApartmentSell(has_elevator=True, has_parking=True, floor=2,
+                                  user=User.objects_list[0], area=80,
+                                  room_count=3, built_year=1399,
+                                  region=reg1, address='qom shahrdary squad',
+                                  price_per_meters=12000, discountable=True,
+                                  convertable=True)
+
+    print(apartmentsell)
