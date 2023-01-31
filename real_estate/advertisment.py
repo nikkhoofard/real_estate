@@ -1,39 +1,40 @@
 from estate import Apartment, House, Store
 from deal import Sell, Rent
+from base import BaseClass
 
 
-class ApartmentSell(Apartment, Sell):
+class ApartmentSell(BaseClass, Apartment, Sell):
 
     def show_details(self):
         self.show_description()
         self.show_price()
 
 
-class ApartmentRent(Apartment, Rent):
+class ApartmentRent(BaseClass, Apartment, Rent):
     def show_details(self):
         self.show_description()
         self.show_price()
 
 
-class HouseSell(House, Sell):
+class HouseSell(BaseClass, House, Sell):
     def show_details(self):
         self.show_description()
         self.show_price()
 
 
-class HouseRent(House, Rent):
+class HouseRent(BaseClass, House, Rent):
     def show_details(self):
         self.show_description()
         self.show_price()
 
 
-class StoreSell(Store, Sell):
+class StoreSell(BaseClass, Store, Sell):
     def show_details(self):
         self.show_description()
         self.show_price()
 
 
-class StoreRent(Store,  Rent):
+class StoreRent(BaseClass, Store,  Rent):
     def show_details(self):
         self.show_description()
         self.show_price()
