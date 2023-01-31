@@ -2,7 +2,7 @@ from abc import ABC
 
 
 class Sell(ABC):
-    def __init__(self, price_per_meters, discountable, convertable, *args, **kwargs):
+    def __init__(self, price_per_meters, discountable, convertable=False, *args, **kwargs):
         self.price_per_meters = price_per_meters
         self.discountable = discountable
         self.convertable = convertable
@@ -14,7 +14,7 @@ class Sell(ABC):
 
 
 class Rent(ABC):
-    def __init__(self, initial_price, monthly_price, convertable, discountable, *args, **kwargs):
+    def __init__(self, initial_price, monthly_price, convertable=False, discountable=False, *args, **kwargs):
         self.discountable = discountable
         self.convertable = convertable
         self.monthly_price = monthly_price

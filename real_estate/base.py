@@ -5,7 +5,7 @@ from manager import Manager
 class BaseClass(ABC):
     _id = 0
     objects_list = None
-    # manager = None
+    manager = None
 
     def __init__(self, *args, **kwargs):
         self.id = self.generate_id()
