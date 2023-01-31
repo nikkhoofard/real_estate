@@ -3,24 +3,37 @@ from deal import Sell, Rent
 
 
 class ApartmentSell(Apartment, Sell):
-    pass
+
+    def show_details(self):
+        self.show_description()
+        self.show_price()
 
 
 class ApartmentRent(Apartment, Rent):
-    pass
+    def show_details(self):
+        self.show_description()
+        self.show_price()
 
 
 class HouseSell(House, Sell):
-    pass
+    def show_details(self):
+        self.show_description()
+        self.show_price()
 
 
 class HouseRent(House, Rent):
-    pass
+    def show_details(self):
+        self.show_description()
+        self.show_price()
 
 
 class StoreSell(Store, Sell):
-    pass
+    def show_details(self):
+        self.show_description()
+        self.show_price()
 
 
 class StoreRent(Store,  Rent):
-    pass
+    def show_details(self):
+        self.show_description()
+        self.show_price()

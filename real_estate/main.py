@@ -41,4 +41,4 @@ if __name__ == "__main__":
                                   price_per_meters=12000, discountable=True,
                                   convertable=True)
 
-    print(apartmentsell)
+    apartmentsell.show_details()
